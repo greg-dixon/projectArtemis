@@ -36,16 +36,16 @@ const ClientQuery = (props: Props) => {
               // console.log("Snapshot Array Before", snapshotArray);
               // console.log("New Array", [...snapshotArray, result]);
               setSnapshotArray([...snapshotArray, result]);
-              localStorage.setItem(
-                "artemis",
-                JSON.stringify([...snapshotArray, result]),
-              );
+              // localStorage.setItem(
+              //   "artemis",
+              //   JSON.stringify([...snapshotArray, result]),
+              // );
             } else {
               console.log(result);
-              localStorage.setItem(
-                "artemis",
-                JSON.stringify([result]),
-              );
+              // localStorage.setItem(
+              //   "artemis",
+              //   JSON.stringify([result]),
+              // );
               setSnapshotArray([result]);
             }
             // console.log("Snapshot Array After", snapshotArray);

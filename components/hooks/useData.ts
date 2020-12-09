@@ -8,21 +8,21 @@ const useData = () => {
   const [aggregateMetrics, setAggregateMetrics] = useState<Result | null>(null);
 
   useEffect(async () => {
-    const artemis = JSON.parse(localStorage.getItem("artemis"));
-    if (!Array.isArray(artemis)) {
-      localStorage.setItem("artemis", JSON.stringify([]));
-    } else {
-      if (artemis.length > 0) {
-        setSnapshotArray(artemis);
-        const result = calculateMetrics(artemis);
-        setAggregateMetrics(result);
-        console.log(aggregateMetrics);
-      }
-    }
-    await console.log(
-      "Local Storage Use Effect",
-      JSON.parse(localStorage.getItem("artemis")),
-    );
+    // const artemis = JSON.parse(localStorage.getItem("artemis"));
+    // if (!Array.isArray(artemis)) {
+    //   localStorage.setItem("artemis", JSON.stringify([]));
+    // } else {
+    //   if (artemis.length > 0) {
+    //     setSnapshotArray(artemis);
+    //     const result = calculateMetrics(artemis);
+    //     setAggregateMetrics(result);
+    //     console.log(aggregateMetrics);
+    //   }
+    // }
+    // await console.log(
+    //   "Local Storage Use Effect",
+    //   JSON.parse(localStorage.getItem("artemis")),
+    // );
     // fetch("http://localhost:4020/artemis")
     //   .then((response) => response.json())
     //   .then((data) => {
