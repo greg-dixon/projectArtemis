@@ -1,16 +1,13 @@
-const addDataSnapshot = (data: object, state: any, path?: string): string => {
+const addDataSnapshot = (dataArray: object, path?: string): void => {
   if (!path) {
-    path = "./artemisCache.json";
+    path = "../../../artemisCache.json";
   }
   //Sets a default path if one is not passed as an argument
   try {
-    state.artemis.push(data);
-    Deno.writeTextFileSync(path, JSON.stringify(state.artemis));
+    Deno.writeTextFileSync(path, JSON.stringify(dataArray));
     console.log("You've successfully added a data snapshot");
-    return `${data}`;
   } catch (err) {
     console.log(err);
-    return err.message;
   }
 };
 

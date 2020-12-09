@@ -24,8 +24,8 @@ const AnalyticsContainer = (props: Props) => {
         aggregateMetrics={aggregateMetrics}
       />
       <ClientQuery
-        // setSnapshotArray={setSnapshotArray}
-        // setAggregateMetrics={setAggregateMetrics}
+        setSnapshotArray={setSnapshotArray}
+        setAggregateMetrics={setAggregateMetrics}
         snapshotArray={snapshotArray}
         aggregateMetrics={aggregateMetrics}
       />
